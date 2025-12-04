@@ -1,0 +1,35 @@
+{
+  "n_total": 1500,
+  "n_train": 1200,
+  "n_test": 300,
+  "target_distribution": {
+    "total": {
+      "0": 0.75,
+      "1": 0.25
+    },
+    "train": {
+      "0": 0.75,
+      "1": 0.25
+    },
+    "test": {
+      "0": 0.75,
+      "1": 0.25
+    }
+  },
+  "features_used": [
+    "Sex",
+    "Age",
+    "Hematocrit",
+    "TotalProtein",
+    "WBV",
+    "TG0h",
+    "HDL",
+    "LDL",
+    "BMI"
+  ],
+  "excluded_features": [
+    "TG4h",
+    "TCR",
+    "ID"
+  ]
+}
