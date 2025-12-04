@@ -1,0 +1,101 @@
+model,family,feature,mean_abs_shap
+ExtraTrees,Tree-based (bagging),Sex_Female,0.003793455666752718
+ExtraTrees,Tree-based (bagging),Sex_Male,0.004231548161310225
+ExtraTrees,Tree-based (bagging),Age,0.008993036607571144
+ExtraTrees,Tree-based (bagging),Hematocrit,0.006186364831724742
+ExtraTrees,Tree-based (bagging),TotalProtein,0.004450438956026029
+ExtraTrees,Tree-based (bagging),WBV,0.005894102366123183
+ExtraTrees,Tree-based (bagging),TG0h,0.1062446502696815
+ExtraTrees,Tree-based (bagging),HDL,0.006568554215142977
+ExtraTrees,Tree-based (bagging),LDL,0.004466665705422401
+ExtraTrees,Tree-based (bagging),BMI,0.007902624775310941
+RandomForest,Tree-based (bagging),Sex_Female,0.00275270004723967
+RandomForest,Tree-based (bagging),Sex_Male,0.00344649177001499
+RandomForest,Tree-based (bagging),Age,0.015495671386376702
+RandomForest,Tree-based (bagging),Hematocrit,0.012341258585794728
+RandomForest,Tree-based (bagging),TotalProtein,0.009804678674625478
+RandomForest,Tree-based (bagging),WBV,0.012440267422064983
+RandomForest,Tree-based (bagging),TG0h,0.1566718365365169
+RandomForest,Tree-based (bagging),HDL,0.012137579430329141
+RandomForest,Tree-based (bagging),LDL,0.011433029566893493
+RandomForest,Tree-based (bagging),BMI,0.012624052364544133
+GradientBoosting,Boosting,Sex_Female,0.02301386179931252
+GradientBoosting,Boosting,Sex_Male,0.006928020468655298
+GradientBoosting,Boosting,Age,0.12804249842648127
+GradientBoosting,Boosting,Hematocrit,0.06462189269087533
+GradientBoosting,Boosting,TotalProtein,0.057510760249889235
+GradientBoosting,Boosting,WBV,0.06488086787177785
+GradientBoosting,Boosting,TG0h,1.206499888638954
+GradientBoosting,Boosting,HDL,0.09266687157875203
+GradientBoosting,Boosting,LDL,0.1403421820770532
+GradientBoosting,Boosting,BMI,0.0691568110781303
+XGBoost,Boosting,Sex_Female,0.11981843411922455
+XGBoost,Boosting,Sex_Male,0.021634703502058983
+XGBoost,Boosting,Age,0.40488964319229126
+XGBoost,Boosting,Hematocrit,0.34458622336387634
+XGBoost,Boosting,TotalProtein,0.3333088159561157
+XGBoost,Boosting,WBV,0.2499401569366455
+XGBoost,Boosting,TG0h,2.0429165363311768
+XGBoost,Boosting,HDL,0.34518855810165405
+XGBoost,Boosting,LDL,0.45042097568511963
+XGBoost,Boosting,BMI,0.2951458692550659
+LightGBM,Boosting,Sex_Female,0.1034132574736444
+LightGBM,Boosting,Sex_Male,0.05600833015113804
+LightGBM,Boosting,Age,0.3966602460716261
+LightGBM,Boosting,Hematocrit,0.26753705556170215
+LightGBM,Boosting,TotalProtein,0.3268072750128702
+LightGBM,Boosting,WBV,0.2493377978229696
+LightGBM,Boosting,TG0h,2.3787807294463965
+LightGBM,Boosting,HDL,0.3498154106404459
+LightGBM,Boosting,LDL,0.4009490397238136
+LightGBM,Boosting,BMI,0.2813084948502448
+MLP,Neural network,Sex_Female,0.052415971647200806
+MLP,Neural network,Sex_Male,0.044419119642297916
+MLP,Neural network,Age,0.015919347441849637
+MLP,Neural network,Hematocrit,0.014587186092453937
+MLP,Neural network,TotalProtein,0.020953222107089428
+MLP,Neural network,WBV,0.015537885073451281
+MLP,Neural network,TG0h,0.17501101460410515
+MLP,Neural network,HDL,0.019604473637497503
+MLP,Neural network,LDL,0.015142316639334335
+MLP,Neural network,BMI,0.020110352482472848
+SVC_RBF,Kernel SVM,Sex_Female,0.006962938828326235
+SVC_RBF,Kernel SVM,Sex_Male,0.0069629388283262384
+SVC_RBF,Kernel SVM,Age,0.01445922492474267
+SVC_RBF,Kernel SVM,Hematocrit,0.0089687197512362
+SVC_RBF,Kernel SVM,TotalProtein,0.014926806978855935
+SVC_RBF,Kernel SVM,WBV,0.008666511239994446
+SVC_RBF,Kernel SVM,TG0h,0.13328505867166393
+SVC_RBF,Kernel SVM,HDL,0.01620465769735273
+SVC_RBF,Kernel SVM,LDL,0.012936415801429473
+SVC_RBF,Kernel SVM,BMI,0.018071999653755923
+GaussianNB,Bayes,Sex_Female,0.0009670908678828025
+GaussianNB,Bayes,Sex_Male,0.000967090867882803
+GaussianNB,Bayes,Age,0.01665389460242009
+GaussianNB,Bayes,Hematocrit,0.011982813168361715
+GaussianNB,Bayes,TotalProtein,0.006674247015249313
+GaussianNB,Bayes,WBV,0.01334297681098752
+GaussianNB,Bayes,TG0h,0.16389358025152684
+GaussianNB,Bayes,HDL,0.010117572356641786
+GaussianNB,Bayes,LDL,0.00522604281957885
+GaussianNB,Bayes,BMI,0.014224348935912295
+Logistic_L1,Linear models,Sex_Female,0.06044212340784444
+Logistic_L1,Linear models,Sex_Male,0.0
+Logistic_L1,Linear models,Age,0.03222422994952265
+Logistic_L1,Linear models,Hematocrit,0.019032679170910873
+Logistic_L1,Linear models,TotalProtein,0.07541792837841807
+Logistic_L1,Linear models,WBV,0.0
+Logistic_L1,Linear models,TG0h,1.0978975999798408
+Logistic_L1,Linear models,HDL,0.051378786616968805
+Logistic_L1,Linear models,LDL,0.0037392650810224456
+Logistic_L1,Linear models,BMI,0.08364342163645568
+Logistic_L2,Linear models,Sex_Female,0.09317168467155268
+Logistic_L2,Linear models,Sex_Male,0.029037591773254524
+Logistic_L2,Linear models,Age,0.03513700421955044
+Logistic_L2,Linear models,Hematocrit,0.018460382138011204
+Logistic_L2,Linear models,TotalProtein,0.08080619175572061
+Logistic_L2,Linear models,WBV,0.004054546536807274
+Logistic_L2,Linear models,TG0h,1.0970297611107458
+Logistic_L2,Linear models,HDL,0.05429760401742494
+Logistic_L2,Linear models,LDL,0.007786129244160457
+Logistic_L2,Linear models,BMI,0.08727092908222366
