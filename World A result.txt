@@ -1,0 +1,49 @@
+✅ MODEL ZOO FINISHED
+Results saved to: model_zoo_results.csv
+               model  best_cv_roc_auc  \
+1        Logistic_L1         0.806741   
+0        Logistic_L2         0.803241   
+6         ExtraTrees         0.799333   
+7   GradientBoosting         0.772694   
+8           AdaBoost         0.789583   
+3         GaussianNB              NaN   
+10               MLP         0.770426   
+12           XGBoost         0.767926   
+11           SVC_RBF         0.780963   
+5       RandomForest         0.781759   
+4       DecisionTree         0.776222   
+13          LightGBM         0.757852   
+9         Bagging_DT         0.772657   
+2                KNN         0.719157   
+
+                                          best_params   roc_auc    pr_auc  \
+1              {'C': 0.1, 'class_weight': 'balanced'}  0.780919  0.500820   
+0             {'C': 10.0, 'class_weight': 'balanced'}  0.778311  0.501530   
+6   {'class_weight': None, 'max_depth': 5, 'min_sa...  0.767763  0.490527   
+7   {'learning_rate': 0.05, 'max_depth': 2, 'n_est...  0.767704  0.469487   
+8        {'learning_rate': 0.05, 'n_estimators': 200}  0.766015  0.436206   
+3                                                  {}  0.764089  0.506185   
+10      {'alpha': 0.001, 'hidden_layer_sizes': (32,)}  0.763852  0.491090   
+12  {'colsample_bytree': 1.0, 'learning_rate': 0.0...  0.757511  0.475924   
+11  {'C': 0.5, 'class_weight': 'balanced', 'gamma'...  0.751319  0.482564   
+5   {'class_weight': None, 'max_depth': 5, 'min_sa...  0.740504  0.446568   
+4            {'max_depth': 3, 'min_samples_split': 2}  0.735644  0.408051   
+13  {'learning_rate': 0.05, 'n_estimators': 200, '...  0.734933  0.468862   
+9           {'max_samples': 0.5, 'n_estimators': 200}  0.733481  0.470319   
+2          {'n_neighbors': 11, 'weights': 'distance'}  0.693215  0.441782   
+
+       brier  accuracy  log_loss  
+1   0.190931  0.706667  0.567151  
+0   0.189980  0.703333  0.566001  
+6   0.167416  0.746667  0.507983  
+7   0.161303  0.760000  0.479987  
+8   0.164488  0.750000  0.498236  
+3   0.158749  0.766667  0.481536  
+10  0.161027  0.763333  0.491311  
+12  0.164681  0.750000  0.492574  
+11  0.161264  0.656667  0.485864  
+5   0.164277  0.750000  0.494712  
+4   0.168647  0.746667  0.716438  
+13  0.183972  0.756667  0.625795  
+9   0.166746  0.766667  0.492633  
+2   0.171514  0.770000  0.739663  

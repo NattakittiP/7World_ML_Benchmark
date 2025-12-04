@@ -1,0 +1,14 @@
+Ablation: No calibration vs isotonic calibration (World A)
+
+Logistic_L1  [RAW]  AUC=0.778, PR=0.502, Brier=0.190, ECE=0.174
+Logistic_L1  [CAL] AUC=0.775, PR=0.495, Brier=0.160, ECE=0.049
+RandomForest [RAW]  AUC=0.740, PR=0.474, Brier=0.164, ECE=0.058
+RandomForest [CAL] AUC=0.738, PR=0.443, Brier=0.167, ECE=0.054
+ExtraTrees   [RAW]  AUC=0.756, PR=0.479, Brier=0.162, ECE=0.050
+ExtraTrees   [CAL] AUC=0.746, PR=0.462, Brier=0.167, ECE=0.048
+GradientBoosting [RAW]  AUC=0.748, PR=0.443, Brier=0.171, ECE=0.087
+GradientBoosting [CAL] AUC=0.728, PR=0.411, Brier=0.168, ECE=0.039
+MLP          [RAW]  AUC=0.764, PR=0.491, Brier=0.161, ECE=0.063
+MLP          [CAL] AUC=0.765, PR=0.492, Brier=0.159, ECE=0.057
+SVC_RBF      [RAW]  AUC=0.746, PR=0.495, Brier=0.162, ECE=0.028
+SVC_RBF      [CAL] AUC=0.746, PR=0.453, Brier=0.163, ECE=0.038

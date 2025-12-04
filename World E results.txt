@@ -1,0 +1,36 @@
+DONE — World E results saved to: preprocessed_outputs/worldE_wbv_error_results.csv
+              model  best_cv_roc_auc  \
+0       Logistic_L1         0.806796   
+1       Logistic_L2         0.806204   
+2      RandomForest         0.784426   
+3        ExtraTrees         0.799870   
+4  GradientBoosting         0.777898   
+5           XGBoost         0.756407   
+6          LightGBM         0.763259   
+7        GaussianNB         0.800852   
+8               MLP         0.770889   
+9           SVC_RBF         0.780926   
+
+                                         best_params   roc_auc    pr_auc  \
+0                   {'C': 0.1, 'class_weight': None}  0.781926  0.502768   
+1            {'C': 10.0, 'class_weight': 'balanced'}  0.775763  0.495624   
+2           {'max_depth': 5, 'min_samples_split': 2}  0.746193  0.455292   
+3           {'max_depth': 5, 'min_samples_split': 5}  0.775289  0.492664   
+4  {'learning_rate': 0.05, 'max_depth': 2, 'n_est...  0.768444  0.469183   
+5  {'colsample_bytree': 0.8, 'max_depth': 3, 'sub...  0.747259  0.447554   
+6  {'learning_rate': 0.05, 'n_estimators': 200, '...  0.761304  0.462796   
+7                                                 {}  0.763733  0.500162   
+8     {'alpha': 0.0001, 'hidden_layer_sizes': (32,)}  0.766637  0.481236   
+9  {'C': 0.5, 'class_weight': 'balanced', 'gamma'...  0.752859  0.469226   
+
+      brier  accuracy  log_loss  wbv_bias  
+0  0.154694  0.773333  0.468663       0.0  
+1  0.190719  0.703333  0.567571       0.0  
+2  0.164516  0.750000  0.495050       0.0  
+3  0.166442  0.746667  0.504592       0.0  
+4  0.161408  0.763333  0.480984       0.0  
+5  0.174948  0.750000  0.534722       0.0  
+6  0.174510  0.753333  0.570070       0.0  
+7  0.159375  0.770000  0.481388       0.0  
+8  0.160912  0.763333  0.484749       0.0  
+9  0.160895  0.663333  0.483469       0.0  
