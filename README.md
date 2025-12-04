@@ -56,50 +56,188 @@ A suggested structure for this repository is:
 ```text
 .
 ├── README.md
-├── requirements.txt
-├── config/
-│   ├── worlds_config.yaml        # Parameters for synthetic world generation
-│   ├── models_config.yaml        # Model zoo + hyperparameter grids
-│   └── rsce_config.yaml          # RSCE weights, bootstrap settings, etc.
-├── data/
-│   ├── world_A.csv               # Reference world
-│   ├── world_B.csv               # Hospital shift
-│   ├── world_C.csv               # Missingness (MCAR+MAR)
-│   ├── world_D.csv               # Noise
-│   ├── world_E.csv               # Surrogate corruption
-│   ├── world_F.csv               # Nonlinear distortion
-│   └── world_G.csv               # Label noise
-├── src/
-│   ├── generate_worlds.py        # Synthetic generator + perturbation engine
-│   ├── train_models.py           # Train model zoo across worlds
-│   ├── compute_metrics.py        # Compute AUROC/AUPRC/Brier/log-loss/ECE
-│   ├── compute_rsce.py           # Compute R/S/C/E + RSCE
-│   ├── explainability_shap.py    # SHAP + explainability stability (E)
-│   ├── ablation_no_wbv.py        # Remove WBV and re-evaluate
-│   ├── ablation_no_calibration.py# Evaluate raw vs calibrated models
-│   └── utils/                    # Shared utility functions
-├── results/
-│   ├── scores_R_S_C.csv          # Per-model R,S,C components
-│   ├── scores_E_all.csv          # Per-model E components
-│   ├── RSCE_family_centroids.csv # Family-level centroids (R,S,C,E,RSCE)
-│   ├── RSCE_errorbars.csv        # Bootstrap CIs for RSCE
-│   ├── ablation_no_WBV_results.csv
-│   ├── ablation_no_calibration_results.csv
-│   ├── shap_family_importance.csv
-│   ├── SHAP_family_matrix.csv
-│   ├── shap_feature_importance_by_model.csv
-│   └── world_rankings.csv        # Rankings of models across worlds
-└── figures/
-    ├── RSCE_barplot.png
-    ├── RSCE_heatmap.png
-    ├── RSCE_family_bar.png
-    ├── RSCE_family_radar.png
-    ├── RSCE_violin.png
-    ├── RSCE_sensitivity.png
+├── Python Code
+│   ├── ablation_no_calibration.py
+│   ├── ablation_no_WBV.py
+│   ├── analyze_RSEC_plots.py
+│   ├── compute_E_All_score.py
+│   ├── compute_E_score.py
+│   ├── compute_R_S_Cscores.py
+│   ├── compute_R_S_scores.py
+│   ├── config.py
+│   ├── preprocess.py
+│   ├── rsce_centroid_plot.py
+│   ├── rsce_cluster_map.py
+│   ├── rsce_error_bars.py
+│   ├── rsce_family_radar.py
+│   ├── RSCE_plot.py
+│   ├── RSCE_sensitivity.py
+│   ├── rsce_violinplot.py
+│   ├── RSCE_Worldrank.py
+│   ├── SHAP_Family.py
+│   ├── SHAP_family_hierarchical.py
+│   ├── shap_visualizations.py
+│   ├── WorldA_Ideal.py
+│   ├── WorldB_hospital_skew.py
+│   ├── WorldC_full_standalone.py
+│   ├── WorldD_distribution_shift.py
+│   ├── WorldE_wbv_errors.py
+│   ├── WorldF_strong_nonlinear.py
+│   ├── worldG_label_noise.py
+│   └── WorldG_plots.py
+├── Result_Figure
+│ ├── bar_C.png
+│ ├── bar_E.png
+│ ├── bar_R.png
+│ ├── bar_RSEC_mean.png
+│ ├── bar_S.png
+│ ├── ExtraTrees_A_vs_F_mean_abs_shap.png
+│ ├── ExtraTrees_WorldA_bar.png
+│ ├── ExtraTrees_WorldA_beeswarm.png
+│ ├── ExtraTrees_WorldA_dependence_BMI.png
+│ ├── ExtraTrees_WorldA_dependence_TG0h.png
+│ ├── ExtraTrees_WorldA_dependence_WBV.png
+│ ├── ExtraTrees_WorldF_bar.png
+│ ├── ExtraTrees_WorldF_beeswarm.png
+│ ├── ExtraTrees_WorldF_dependence_BMI.png
+│ ├── ExtraTrees_WorldF_dependence_TG0h.png
+│ ├── ExtraTrees_WorldF_dependence_WBV.png
+│ ├── G1_auc_vs_noise.png
+│ ├── G1_brier_vs_noise.png
+│ ├── G2_auc_bar.png
+│ ├── G2_brier_bar.png
+│ ├── GradientBoosting_A_vs_F_mean_abs_shap.png
+│ ├── GradientBoosting_WorldA_bar.png
+│ ├── GradientBoosting_WorldA_beeswarm.png
+│ ├── GradientBoosting_WorldA_dependence_BMI.png
+│ ├── GradientBoosting_WorldA_dependence_TG0h.png
+│ ├── GradientBoosting_WorldA_dependence_WBV.png
+│ ├── GradientBoosting_WorldF_bar.png
+│ ├── GradientBoosting_WorldF_beeswarm.png
+│ ├── GradientBoosting_WorldF_dependence_BMI.png
+│ ├── GradientBoosting_WorldF_dependence_TG0h.png
+│ ├── GradientBoosting_WorldF_dependence_WBV.png
+│ ├── heatmap_R_S_C_E.png
+│ ├── Logistic_L1_A_vs_F_mean_abs_shap.png
+│ ├── Logistic_L1_WorldA_bar.png
+│ ├── Logistic_L1_WorldA_beeswarm.png
+│ ├── Logistic_L1_WorldA_dependence_BMI.png
+│ ├── Logistic_L1_WorldA_dependence_TG0h.png
+│ ├── Logistic_L1_WorldA_dependence_WBV.png
+│ ├── Logistic_L1_WorldF_bar.png
+│ ├── Logistic_L1_WorldF_beeswarm.png
+│ ├── Logistic_L1_WorldF_dependence_BMI.png
+│ ├── Logistic_L1_WorldF_dependence_TG0h.png
+│ ├── Logistic_L1_WorldF_dependence_WBV.png
+│ ├── MLP_A_vs_F_mean_abs_shap.png
+│ ├── MLP_WorldA_bar.png
+│ ├── MLP_WorldA_beeswarm.png
+│ ├── MLP_WorldA_dependence_BMI.png
+│ ├── MLP_WorldA_dependence_TG0h.png
+│ ├── MLP_WorldA_dependence_WBV.png
+│ ├── MLP_WorldF_bar.png
+│ ├── MLP_WorldF_beeswarm.png
+│ ├── MLP_WorldF_dependence_BMI.png
+│ ├── MLP_WorldF_dependence_TG0h.png
+│ ├── MLP_WorldF_dependence_WBV.png
+│ ├── radar_R_S_C_E_all_models.png
+│ ├── RandomForest_A_vs_F_mean_abs_shap.png
+│ ├── RandomForest_WorldA_bar.png
+│ ├── RandomForest_WorldA_beeswarm.png
+│ ├── RandomForest_WorldA_dependence_BMI.png
+│ ├── RandomForest_WorldA_dependence_TG0h.png
+│ ├── RandomForest_WorldA_dependence_WBV.png
+│ ├── RandomForest_WorldF_bar.png
+│ ├── RandomForest_WorldF_beeswarm.png
+│ ├── RandomForest_WorldF_dependence_BMI.png
+│ ├── RandomForest_WorldF_dependence_TG0h.png
+│ ├── RandomForest_WorldF_dependence_WBV.png
+│ ├── RSCE_3D_cube.png
+│ ├── RSCE_bar_with_errorbars.png
+│ ├── RSCE_barplot.png
+│ ├── RSCE_cluster_map.png
+│ ├── RSCE_family_bar.png
+│ ├── RSCE_family_centroid_scatter.png
+│ ├── RSCE_family_radar.png
+│ ├── RSCE_heatmap.png
+│ ├── RSCE_radar.png
+│ ├── RSCE_sensitivity.png
+│ ├── RSCE_violin.png
+│ ├── scatter_3D_R_S_E.png
+│ ├── scatter_C_vs_E.png
+│ ├── scatter_R_vs_E.png
+│ ├── scatter_R_vs_S.png
+│ ├── scatter_S_vs_E.png
+│ ├── SHAP_family_Bayes_top5.png
+│ ├── SHAP_family_Boosting_top5.png
+│ ├── SHAP_family_hierarchical_map.png
+│ ├── SHAP_Family_importance.png
+│ ├── SHAP_family_Kernel_SVM_top5.png
+│ ├── SHAP_family_Linear_models_top5.png
+│ ├── SHAP_family_Neural_network_top5.png
+│ ├── SHAP_family_Tree-based_bagging_top5.png
+│ ├── SVC_RBF_A_vs_F_mean_abs_shap.png
+│ ├── SVC_RBF_WorldA_bar.png
+│ ├── SVC_RBF_WorldA_beeswarm.png
+│ ├── SVC_RBF_WorldA_dependence_BMI.png
+│ ├── SVC_RBF_WorldA_dependence_TG0h.png
+│ ├── SVC_RBF_WorldA_dependence_WBV.png
+│ ├── SVC_RBF_WorldF_bar.png
+│ ├── SVC_RBF_WorldF_beeswarm.png
+│ ├── SVC_RBF_WorldF_dependence_BMI.png
+│ ├── SVC_RBF_WorldF_dependence_TG0h.png
+│ ├── SVC_RBF_WorldF_dependence_WBV.png
+│ ├── world_rank_spearman_heatmap.png
+│ ├── world_rank_spearman_vs_WorldA.png
+│ ├── XGBoost_A_vs_F_mean_abs_shap.png
+│ ├── XGBoost_WorldA_bar.png
+│ ├── XGBoost_WorldA_beeswarm.png
+│ ├── XGBoost_WorldA_dependence_BMI.png
+│ ├── XGBoost_WorldA_dependence_TG0h.png
+│ ├── XGBoost_WorldA_dependence_WBV.png
+│ ├── XGBoost_WorldF_bar.png
+│ ├── XGBoost_WorldF_beeswarm.png
+│ ├── XGBoost_WorldF_dependence_BMI.png
+│ ├── XGBoost_WorldF_dependence_TG0h.png
+│ └── XGBoost_WorldF_dependence_WBV.png
+├── Result_Text
+│   ├── Ablation_no_calibration.txt
+│   ├── Ablation_no_WBV.txt
+│   ├── E scores.txt
+│   ├── E scores_All.txt
+│   ├── Family centroids.txt
+│   ├── Merged & RSCE-computed table.txt
+│   ├── R & S scores.txt
+│   ├── R_S_C scores.txt
+│   ├── World A result.txt
+│   ├── World B result.txt
+│   ├── World C results.txt
+│   ├── World D results.txt
+│   ├── World E results.txt
+│   ├── World F result.txt
+│   ├── World G result.txt
+│   └── World rank matrix.txt
+├── Result_npz, Json, Joblib
+│   ├── summary.json
+│   ├── preprocessor.joblib
+│   ├── test_arrays.npz
+│   └── train_arrays.npz
+└── Result_CSV
+    ├── Ablation_no_calibration.txt
+    ├── Ablation_no_WBV.txt
+    ├── E scores.txt
+    ├── E scores_All.txt
+    ├── Family centroids.txt
+    ├── Merged & RSCE-computed table.txt
+    ├── R & S scores.txt
+    ├── R_S_C scores.txt
+    ├── World A result.txt
+    ├── World B result.txt
+    ├── World C results.txt
+    ├── World D results.txt
+    ├── World E results.txt
+    ├── World F result.txt
+    ├── World G result.txt
+    └── World rank matrix.txt
 
-
-    ├── world_rank_spearman_heatmap.png
-    ├── world_rank_spearman_vs_WorldA.png
-    ├── SHAP_family_hierarchical_map.png
-    ├── SHAP_Family_importance.png
-    └── RSCE_bar_with_errorbars.png# 7World_ML_Benchmark
+   
