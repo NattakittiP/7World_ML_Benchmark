@@ -1,0 +1,43 @@
+WORLD G: Label-noise robustness results
+
+=== Scenario: G1_random_symmetric (RSLN) ===
+Random symmetric noise: flip ~5.0% of all labels.
+Actual flipped fraction in train set: 5.00%
+Logistic_L1     | AUC=0.782, PR-AUC=0.497, Brier=0.196, Acc=0.703
+Logistic_L2     | AUC=0.781, PR-AUC=0.496, Brier=0.196, Acc=0.707
+RandomForest    | AUC=0.740, PR-AUC=0.451, Brier=0.164, Acc=0.753
+ExtraTrees      | AUC=0.757, PR-AUC=0.479, Brier=0.164, Acc=0.747
+GradientBoosting | AUC=0.731, PR-AUC=0.411, Brier=0.175, Acc=0.747
+AdaBoost        | AUC=0.769, PR-AUC=0.460, Brier=0.162, Acc=0.747
+GaussianNB      | AUC=0.749, PR-AUC=0.493, Brier=0.161, Acc=0.757
+KNN             | AUC=0.700, PR-AUC=0.448, Brier=0.170, Acc=0.760
+MLP             | AUC=0.745, PR-AUC=0.474, Brier=0.164, Acc=0.767
+SVC_RBF         | AUC=0.741, PR-AUC=0.463, Brier=0.163, Acc=0.750
+
+=== Scenario: G1_random_symmetric (RSLN) ===
+Random symmetric noise: flip ~10.0% of all labels.
+Actual flipped fraction in train set: 10.00%
+Logistic_L1     | AUC=0.781, PR-AUC=0.498, Brier=0.205, Acc=0.693
+Logistic_L2     | AUC=0.781, PR-AUC=0.499, Brier=0.204, Acc=0.690
+RandomForest    | AUC=0.744, PR-AUC=0.487, Brier=0.166, Acc=0.757
+ExtraTrees      | AUC=0.758, PR-AUC=0.496, Brier=0.167, Acc=0.753
+GradientBoosting | AUC=0.685, PR-AUC=0.359, Brier=0.188, Acc=0.700
+AdaBoost        | AUC=0.778, PR-AUC=0.479, Brier=0.160, Acc=0.773
+GaussianNB      | AUC=0.768, PR-AUC=0.503, Brier=0.160, Acc=0.767
+KNN             | AUC=0.672, PR-AUC=0.424, Brier=0.176, Acc=0.767
+MLP             | AUC=0.725, PR-AUC=0.466, Brier=0.167, Acc=0.763
+SVC_RBF         | AUC=0.742, PR-AUC=0.464, Brier=0.168, Acc=0.750
+
+=== Scenario: G2_class_conditional (CCLN) ===
+Class-conditional noise: flip 1->0 ~15.0%, 0->1 ~5.0%.
+Actual flipped fraction in train set: 7.50%
+Logistic_L1     | AUC=0.765, PR-AUC=0.491, Brier=0.199, Acc=0.667
+Logistic_L2     | AUC=0.764, PR-AUC=0.487, Brier=0.199, Acc=0.667
+RandomForest    | AUC=0.713, PR-AUC=0.439, Brier=0.168, Acc=0.753
+ExtraTrees      | AUC=0.747, PR-AUC=0.478, Brier=0.165, Acc=0.757
+GradientBoosting | AUC=0.705, PR-AUC=0.403, Brier=0.176, Acc=0.737
+AdaBoost        | AUC=0.782, PR-AUC=0.496, Brier=0.164, Acc=0.750
+GaussianNB      | AUC=0.748, PR-AUC=0.486, Brier=0.161, Acc=0.760
+KNN             | AUC=0.705, PR-AUC=0.471, Brier=0.167, Acc=0.763
+MLP             | AUC=0.724, PR-AUC=0.443, Brier=0.167, Acc=0.757
+SVC_RBF         | AUC=0.738, PR-AUC=0.460, Brier=0.165, Acc=0.750

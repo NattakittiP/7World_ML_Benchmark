@@ -1,0 +1,8 @@
+Ablation: Removing WBV from feature set (World A)
+
+Logistic_L1  | AUC=0.778, PR=0.502, Brier=0.190, Acc=0.703
+RandomForest | AUC=0.747, PR=0.469, Brier=0.164, Acc=0.753
+ExtraTrees   | AUC=0.763, PR=0.498, Brier=0.160, Acc=0.757
+GradientBoosting | AUC=0.734, PR=0.416, Brier=0.175, Acc=0.730
+MLP          | AUC=0.759, PR=0.476, Brier=0.163, Acc=0.753
+SVC_RBF      | AUC=0.745, PR=0.471, Brier=0.162, Acc=0.760

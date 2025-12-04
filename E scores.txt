@@ -1,0 +1,6 @@
+=== Explainability Stability Scores (A vs F) ===
+              model      GEST       LEC  ADP_norm         E
+2               MLP  1.000000  0.000000  0.861322  0.672264
+0           XGBoost  0.696970 -0.211122  0.000000  0.285148
+1  GradientBoosting  0.406061  0.057780  0.068269  0.234018
+3           SVC_RBF -1.000000  0.000000  0.895555 -0.320889
