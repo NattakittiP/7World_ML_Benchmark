@@ -84,7 +84,12 @@ A suggested structure for this repository is:
 │   ├── WorldE_wbv_errors.py
 │   ├── WorldF_strong_nonlinear.py
 │   ├── worldG_label_noise.py
-│   └── WorldG_plots.py
+│   ├── WorldG_plots.py
+│   ├── nhanes_merge_Dataset.py
+│   ├── nhanes_World_metrics_RSCE_fullscore.py
+│   ├── Merge_MIMIC-IV_and_Preparing.py
+│   ├── RSCE_MIMIC-IV.py
+│   └── RSCE_MIMIC-IV_Plot.py
 ├── Result_Figure
 │   ├── bar_C.png
 │   ├── bar_E.png
@@ -199,7 +204,13 @@ A suggested structure for this repository is:
 │   ├── XGBoost_WorldF_beeswarm.png
 │   ├── XGBoost_WorldF_dependence_BMI.png
 │   ├── XGBoost_WorldF_dependence_TG0h.png
-│   └── XGBoost_WorldF_dependence_WBV.png
+│   ├── XGBoost_WorldF_dependence_WBV.png
+│   ├── sensitivity_plot.png
+│   ├── MIMIC-IV_Result.png
+│   ├── nhanes_ECE_result.png
+│   ├── nhanes_Logloss_result.png
+│   ├── nhanes_AUROC_result.png
+│   └── nhanes_Brier_result.png
 ├── Result_Text
 │   ├── Ablation_no_calibration.txt
 │   ├── Ablation_no_WBV.txt
@@ -223,21 +234,44 @@ A suggested structure for this repository is:
 │   ├── test_arrays.npz
 │   └── train_arrays.npz
 └── Result_CSV
-    ├── Ablation_no_calibration.txt
-    ├── Ablation_no_WBV.txt
-    ├── E scores.txt
-    ├── E scores_All.txt
-    ├── Family centroids.txt
-    ├── Merged & RSCE-computed table.txt
-    ├── R & S scores.txt
-    ├── R_S_C scores.txt
-    ├── World A result.txt
-    ├── World B result.txt
-    ├── World C results.txt
-    ├── World D results.txt
-    ├── World E results.txt
-    ├── World F result.txt
-    ├── World G result.txt
-    └── World rank matrix.txt
+    ├── ablation_no_calibration_results.csv
+    ├── ablation_no_WBV_results.csv
+    ├── Baseline.csv
+    ├── RSCE_errorbars.csv
+    ├── RSCE_family_centroids.csv
+    ├── scores_E.csv
+    ├── scores_E_all.csv
+    ├── Scores_R_S.csv
+    ├── scores_R_S_C.csv
+    ├── shap_family_importance.csv
+    ├── SHAP_family_matrix.csv
+    ├── shap_feature_importance_by_model.csv
+    ├── world_rank_spearman.csv
+    ├── world_rankings.csv
+    ├── worldA_Ideal.csv
+    ├── worldB_hospital_skew_results.csv
+    ├── worldC_noise_missing_outliers_results.csv
+    ├── worldD_distribution_shift_results.csv
+    ├── worldE_wbv_error_results.csv
+    ├── worldF_strong_nonlinear_results.csv
+    ├── worldG_label_noise_results.csv
+    ├── nhanes_rsce_dataset.csv
+    ├── nhanes_rsce_dataset_clean.csv
+    ├── nhanes_E_components.csv
+    ├── nhanes_E_scores.csv
+    ├── nhanes_RSCE_full_scores.csv
+    ├── nhanes_world_metrics.csv
+    ├── mortality_E_components.csv
+    ├── mortality_E_scores.csv
+    ├── mortality_RSCE_full_scores.csv
+    ├── mortality_world_metrics.csv
+    ├── merged_lab_admission_patient.csv
+    ├── clear_merged_lab_admission_patient.csv
+    ├── analytic_dataset_mortality_all_admissions.csv
+    ├── MIMIC-IV_admissions_RealDataset.csv
+    ├── MIMIC-IV_labevents_RealDataset.csv
+    └── MIMIC-IV_patients_RealDataset.csv
+
+
 
    
