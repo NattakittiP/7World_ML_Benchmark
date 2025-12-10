@@ -90,6 +90,17 @@ A suggested structure for this repository is:
 │   ├── Merge_MIMIC-IV_and_Preparing.py
 │   ├── RSCE_MIMIC-IV.py
 │   └── RSCE_MIMIC-IV_Plot.py
+├── NHaNES_Real_Data_Set
+│   ├── AUQ_L.xpt
+│   ├── BIOPRO_L.xpt
+│   ├── BMX_L.xpt
+│   ├── CBC_L.xpt
+│   ├── DEMO_L.xpt
+│   ├── FASTQX_L.xpt
+│   ├── GLU_L.xpt
+│   ├── HDL_L.XPT
+│   ├── TCHOL_L.xpt
+│   └── TRIGLY_L.xpt
 ├── Result_Figure
 │   ├── bar_C.png
 │   ├── bar_E.png
